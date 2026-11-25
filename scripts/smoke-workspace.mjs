@@ -113,7 +113,12 @@ try {
     await writeFile(output(name), Buffer.from(image.data, "base64"));
   }
   const path = mode === "local" ? "/workspace" : "/demo";
+  const homepage = await fetch(base + "/", { redirect: "manual", signal: AbortSignal.timeout(5000) });
   if (mode === "public-only") {
+    assert.equal(homepage.status, 307);
+    assert.equal(homepage.headers.get("location"), "/demo");
+    await open("/", "Correctness");
+    assert.equal(await js("location.pathname"), "/demo");
     for (const route of ["/workspace", "/workspace/evidence"]) {
       const response = await fetch(base + route, { redirect: "manual", signal: AbortSignal.timeout(5000) });
       assert.equal(response.status, 307);
@@ -122,6 +127,10 @@ try {
     for (const route of ["/demo/projects", "/workspace/projects"]) {
       assert.equal((await fetch(base + route, { signal: AbortSignal.timeout(5000) })).status, 404);
     }
+  } else {
+    assert.equal(homepage.status, 200);
+    await open("/", "Alice balance");
+    assert.equal(await js("document.querySelector('h1')?.textContent"), "LedgerLab");
   }
   for (const route of ["/api/repair", "/api/verify", "/api/executions", "/demo/api/repair", "/workspace/api/repair"]) {
     const response = await fetch(base + route, { method: "POST", headers: { "content-type": "application/json" },
@@ -239,7 +248,21 @@ try {
     await until(() => pageIncludes("Configuration imported"), "project import");
   }
   await open(path + "/sandbox", "Explore the ledger");
+  assert.equal(await js("document.querySelector('iframe')?.getAttribute('src')"), "/ledgerlab");
+  assert.equal(await js("!!document.querySelector('main a[href=\"/ledgerlab\"]')"), true);
   await until(() => js("document.querySelector('iframe')?.contentDocument?.body?.innerText.includes('Alice balance')"), "embedded LedgerLab");
+  await open("/ledgerlab", "Alice balance");
+  await until(async () => {
+    if (await pageIncludes("Transfer completed.")) return true;
+    await js("(() => { const form=document.querySelector('form'); form.querySelector('[name=amount]').value='100'; form.requestSubmit(); })()");
+    await pause(180);
+    return pageIncludes("Transfer completed.");
+  }, "canonical LedgerLab transfer");
+  assert.deepEqual(await js("Array.from(document.querySelectorAll('output.balance'),o=>o.textContent)"), ["$900.00", "$600.00"]);
+  await button("Reset demo state", "Demo state reset.");
+  assert.deepEqual(await js("Array.from(document.querySelectorAll('output.balance'),o=>o.textContent)"), ["$1,000.00", "$500.00"]);
+  await open("/fixtures/conservation", "Seeded defect fixture");
+  assert.deepEqual(await js("Array.from(document.querySelectorAll('footer a'),a=>a).filter(a=>a.textContent==='Corrected ledger' && a.getClientRects().length).map(a=>a.getAttribute('href'))"), ["/ledgerlab"]);
   await open("/inventory/seeded", "Seeded inventory discrepancy");
   await until(async () => {
     await js("(() => { const form=document.querySelector('form'); form.querySelector('[name=quantity]').value='40'; form.requestSubmit(); })()");

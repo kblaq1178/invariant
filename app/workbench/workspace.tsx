@@ -504,13 +504,13 @@ function Sandbox({ mode }: { mode: Mode }) {
     <div className="iw-two">
       <article className="iw-panel"><p className="iw-kicker">BROWSER SANDBOX</p><h2>Explore the ledger</h2>
         <p>Inspect account balances, submit a fictional transfer, or reset the demo state.</p>
-        <Link className="iw-button iw-primary" href="/">Open LedgerLab <span aria-hidden="true">↗</span></Link></article>
+        <Link className="iw-button iw-primary" href="/ledgerlab">Open LedgerLab <span aria-hidden="true">↗</span></Link></article>
       <article className="iw-panel"><p className="iw-kicker">SEEDED FIXTURES</p><h2>Controlled defects</h2>
         <p>The two fixtures model distinct business-rule failures. They are labeled separately from the corrected ledger.</p>
         <div className="iw-actions"><Link className="iw-button iw-secondary" href="/fixtures/conservation">Conservation fixture</Link>
           <Link className="iw-button iw-secondary" href="/fixtures/idempotency">Idempotency fixture</Link></div></article>
     </div>
-    <iframe className="iw-sandbox-frame" src="/" title="Interactive LedgerLab sandbox" />
+    <iframe className="iw-sandbox-frame" src="/ledgerlab" title="Interactive LedgerLab sandbox" />
     {mode === "demo" && <p className="iw-note">LedgerLab interactions are browser-local. Public demo pages replay recorded agent evidence.</p>}
   </>;
 }

@@ -48,7 +48,7 @@ npm.cmd run start
 | `/workspace` | Overview, contracts, historical executions, repairs, and evidence |
 | `/workspace/projects` | Create, validate, import, and export project configurations in the browser |
 | `/demo` | Guided replay with original receipts and downloadable diffs |
-| `/` and `/fixtures/conservation` | Corrected and seeded LedgerLab |
+| `/ledgerlab` and `/fixtures/conservation` | Corrected and seeded LedgerLab |
 | `/inventory` and `/inventory/seeded` | Independent corrected and seeded stock transfers |
 
 ## Configure and verify a project
@@ -96,7 +96,7 @@ The repair packet carries the observed violation, hashed evidence, and allowed t
 
 ## Public demo and evidence
 
-Build with `INVARIANT_PUBLIC_ONLY=1` for hosting and use `/demo` as the visitor entry point. The public application serves sanitized, recorded evidence and browser-local sandboxes. Agent execution stays in the workstation CLI. The deployed application needs no Kane or Codex credentials. Local configurations remain in the user's browser storage or explicitly exported files.
+Build with `INVARIANT_PUBLIC_ONLY=1` for hosting. The public root redirects to `/demo`. The local root still serves LedgerLab for the existing Kane workflows, and `/ledgerlab` opens the sandbox in both modes. The public application serves sanitized, recorded evidence and browser-local sandboxes. Agent execution stays in the workstation CLI. The deployed application needs no Kane or Codex credentials. Local configurations remain in the user's browser storage or explicitly exported files.
 
 ```powershell
 $env:INVARIANT_PUBLIC_ONLY = '1'
