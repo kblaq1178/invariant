@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "source": "kane",
+  "executionId": "118984c4-e2a7-44a5-a1c8-a9c30434b1da",
+  "cliVersion": "0.10.9",
+  "objective": "observe",
+  "url": "http://127.0.0.1:3000/",
+  "seededDefect": false,
+  "timestamp": "2026-11-25T15:44:20.886Z",
+  "workflow": "TIMED_OUT",
+  "exitCode": 1,
+  "completedSteps": 3,
+  "durationSeconds": null,
+  "observationsStatus": "UNAVAILABLE",
+  "observationIssue": "Workflow did not complete successfully. Browser values are ineligible.",
+  "repairAuthorization": "NOT_AUTHORIZED",
+  "verification": "NOT_APPLICABLE",
+  "verdict": null,
+  "creditsConsumed": null,
+  "cumulativeReportedCredits": null,
+  "evidence": {
+    "stdoutSha256": "727a2cba0a5e504d0aa76a8160801337da0ba613f46ce49fb89ba4727eaabd75",
+    "stderrSha256": "abd1bbc4b9c443faa09140a967f129b816ffc5d6db2d7578d36ce334f04ffef5",
+    "contractSha256": "393639a7598c4d24ad147dc5f8a1dfe1448355721527f125b649ba6e8ed674bb",
+    "objectiveSha256": "b80fb795479b031c57c089a76ca044eb25a70908189e1b788a1ba3ba38f3ddd8"
+  }
+}

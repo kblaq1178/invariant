@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "contracts": [
+    {
+      "id": "INV-001",
+      "name": "Conservation",
+      "description": "A transfer preserves the sum of both account balances.",
+      "objective": "transfer",
+      "operator": "sum_equals",
+      "requiredObservations": [
+        "before_sender",
+        "before_recipient",
+        "after_sender",
+        "after_recipient"
+      ],
+      "severity": "critical",
+      "expectedRelationship": {
+        "before": [
+          "before_sender",
+          "before_recipient"
+        ],
+        "after": [
+          "after_sender",
+          "after_recipient"
+        ]
+      }
+    },
+    {
+      "id": "INV-002",
+      "name": "Idempotency",
+      "description": "Retrying a successful transaction preserves both balances and the success count.",
+      "objective": "retry",
+      "operator": "pairs_equal",
+      "requiredObservations": [
+        "before_sender",
+        "after_sender",
+        "before_recipient",
+        "after_recipient",
+        "before_count",
+        "after_count",
+        "transaction_id",
+        "retried_id"
+      ],
+      "severity": "high",
+      "expectedRelationship": {
+        "pairs": [
+          [
+            "before_sender",
+            "after_sender"
+          ],
+          [
+            "before_recipient",
+            "after_recipient"
+          ],
+          [
+            "before_count",
+            "after_count"
+          ],
+          [
+            "transaction_id",
+            "retried_id"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "INV-003",
+      "name": "Non-negative balances",
+      "description": "Successful operations preserve non-negative balances.",
+      "objective": "transfer",
+      "operator": "planned",
+      "requiredObservations": [
+        "after_sender",
+        "after_recipient"
+      ],
+      "severity": "high",
+      "expectedRelationship": {
+        "rule": "Both balances are at least zero."
+      }
+    },
+    {
+      "id": "INV-004",
+      "name": "Refund reversibility",
+      "description": "A refund reverses the original balance changes.",
+      "objective": "refund",
+      "operator": "planned",
+      "requiredObservations": [
+        "before_sender",
+        "before_recipient",
+        "after_sender",
+        "after_recipient"
+      ],
+      "severity": "high",
+      "expectedRelationship": {
+        "rule": "Original balances are restored after a refund."
+      }
+    },
+    {
+      "id": "INV-005",
+      "name": "Atomicity of failed transactions",
+      "description": "Rejected transfers preserve ledger state.",
+      "objective": "failed-transfer",
+      "operator": "planned",
+      "requiredObservations": [
+        "before_sender",
+        "before_recipient",
+        "after_sender",
+        "after_recipient"
+      ],
+      "severity": "critical",
+      "expectedRelationship": {
+        "rule": "Balances and successful history are unchanged."
+      }
+    }
+  ]
+}

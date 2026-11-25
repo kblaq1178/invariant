@@ -1,0 +1,20 @@
+diff --git a/before.ts.txt b/candidate.ts.txt
+index 4e2d9d6..bdc29b3 100644
+--- a/before.ts.txt
++++ b/candidate.ts.txt
+@@ -31,9 +31,13 @@ export const transactions: TransactionLogic = {
+   transfer(ledger, transaction) {
+     if (ledger.history.some((entry) => entry.id === transaction.id)) throw new Error("Transaction identifier already used.");
+     validateTransfer(ledger, transaction);
+-    const { recipient, cents } = transaction;
++    const { sender, recipient, cents } = transaction;
+     return {
+-      balances: { ...ledger.balances, [recipient]: ledger.balances[recipient] + cents },
++      balances: {
++        ...ledger.balances,
++        [sender]: ledger.balances[sender] - cents,
++        [recipient]: ledger.balances[recipient] + cents,
++      },
+       history: [transaction, ...ledger.history],
+     };
+   },

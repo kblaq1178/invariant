@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "source": "kane",
+  "executionId": "503b1393-9364-4dc7-949a-81147a1b354f",
+  "cliVersion": "0.10.9",
+  "objective": "seeded-conservation",
+  "url": "http://127.0.0.1:3000/fixtures/conservation",
+  "seededDefect": true,
+  "timestamp": "2026-11-25T15:59:32.383Z",
+  "workflow": "PASSED",
+  "exitCode": 0,
+  "completedSteps": 8,
+  "durationSeconds": 74.3,
+  "observationsStatus": "AVAILABLE",
+  "observations": {
+    "before_sender": {
+      "value": "$1,000.00",
+      "provenance": {
+        "source": "kane",
+        "executionId": "503b1393-9364-4dc7-949a-81147a1b354f",
+        "field": "before_sender",
+        "stdoutSha256": "920aefaef3908281b6e5c4dab2e328955c9160152670fc2ea68370f011f44074"
+      }
+    },
+    "before_recipient": {
+      "value": "$500.00",
+      "provenance": {
+        "source": "kane",
+        "executionId": "503b1393-9364-4dc7-949a-81147a1b354f",
+        "field": "before_recipient",
+        "stdoutSha256": "920aefaef3908281b6e5c4dab2e328955c9160152670fc2ea68370f011f44074"
+      }
+    },
+    "after_sender": {
+      "value": "$1,000.00",
+      "provenance": {
+        "source": "kane",
+        "executionId": "503b1393-9364-4dc7-949a-81147a1b354f",
+        "field": "after_sender",
+        "stdoutSha256": "920aefaef3908281b6e5c4dab2e328955c9160152670fc2ea68370f011f44074"
+      }
+    },
+    "after_recipient": {
+      "value": "$600.00",
+      "provenance": {
+        "source": "kane",
+        "executionId": "503b1393-9364-4dc7-949a-81147a1b354f",
+        "field": "after_recipient",
+        "stdoutSha256": "920aefaef3908281b6e5c4dab2e328955c9160152670fc2ea68370f011f44074"
+      }
+    }
+  },
+  "normalizedCents": {
+    "before_sender": {
+      "cents": 100000,
+      "provenance": {
+        "source": "kane",
+        "executionId": "503b1393-9364-4dc7-949a-81147a1b354f",
+        "field": "before_sender",
+        "stdoutSha256": "920aefaef3908281b6e5c4dab2e328955c9160152670fc2ea68370f011f44074"
+      }
+    },
+    "before_recipient": {
+      "cents": 50000,
+      "provenance": {
+        "source": "kane",
+        "executionId": "503b1393-9364-4dc7-949a-81147a1b354f",
+        "field": "before_recipient",
+        "stdoutSha256": "920aefaef3908281b6e5c4dab2e328955c9160152670fc2ea68370f011f44074"
+      }
+    },
+    "after_sender": {
+      "cents": 100000,
+      "provenance": {
+        "source": "kane",
+        "executionId": "503b1393-9364-4dc7-949a-81147a1b354f",
+        "field": "after_sender",
+        "stdoutSha256": "920aefaef3908281b6e5c4dab2e328955c9160152670fc2ea68370f011f44074"
+      }
+    },
+    "after_recipient": {
+      "cents": 60000,
+      "provenance": {
+        "source": "kane",
+        "executionId": "503b1393-9364-4dc7-949a-81147a1b354f",
+        "field": "after_recipient",
+        "stdoutSha256": "920aefaef3908281b6e5c4dab2e328955c9160152670fc2ea68370f011f44074"
+      }
+    }
+  },
+  "repairAuthorization": "NOT_AUTHORIZED",
+  "verification": "VIOLATED",
+  "verdict": {
+    "contractId": "INV-001",
+    "status": "VIOLATED",
+    "expected": 150000,
+    "observed": 160000,
+    "difference": 10000,
+    "explanation": "Combined balance changed after the transfer.",
+    "provenance": [
+      {
+        "source": "kane",
+        "executionId": "503b1393-9364-4dc7-949a-81147a1b354f",
+        "field": "before_sender",
+        "stdoutSha256": "920aefaef3908281b6e5c4dab2e328955c9160152670fc2ea68370f011f44074"
+      },
+      {
+        "source": "kane",
+        "executionId": "503b1393-9364-4dc7-949a-81147a1b354f",
+        "field": "before_recipient",
+        "stdoutSha256": "920aefaef3908281b6e5c4dab2e328955c9160152670fc2ea68370f011f44074"
+      },
+      {
+        "source": "kane",
+        "executionId": "503b1393-9364-4dc7-949a-81147a1b354f",
+        "field": "after_sender",
+        "stdoutSha256": "920aefaef3908281b6e5c4dab2e328955c9160152670fc2ea68370f011f44074"
+      },
+      {
+        "source": "kane",
+        "executionId": "503b1393-9364-4dc7-949a-81147a1b354f",
+        "field": "after_recipient",
+        "stdoutSha256": "920aefaef3908281b6e5c4dab2e328955c9160152670fc2ea68370f011f44074"
+      }
+    ],
+    "timestamp": "2026-11-25T15:59:34.376Z",
+    "executionId": "503b1393-9364-4dc7-949a-81147a1b354f"
+  },
+  "creditsConsumed": 26.634342500000002,
+  "cumulativeReportedCredits": 50.28935,
+  "evidence": {
+    "stdoutSha256": "920aefaef3908281b6e5c4dab2e328955c9160152670fc2ea68370f011f44074",
+    "stderrSha256": "fd566c42e94d2e9c5884ee54545eb84807f4ae37cdec7ca74204f11bb89d2370",
+    "contractSha256": "393639a7598c4d24ad147dc5f8a1dfe1448355721527f125b649ba6e8ed674bb",
+    "objectiveSha256": "693753f35149bd7a50f80c3c3a2f2bdb5978d6fc24fc5ad812d1b2a2f6348552"
+  }
+}

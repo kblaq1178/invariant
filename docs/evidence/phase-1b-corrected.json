@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "source": "kane",
+  "executionId": "57a2f865-9b1c-4eaa-8a32-30a3d5bfb474",
+  "cliVersion": "0.10.9",
+  "objective": "transfer",
+  "url": "http://127.0.0.1:3000/",
+  "seededDefect": false,
+  "timestamp": "2026-11-25T16:03:30.874Z",
+  "workflow": "PASSED",
+  "exitCode": 0,
+  "completedSteps": 13,
+  "durationSeconds": 111.9,
+  "observationsStatus": "AVAILABLE",
+  "observations": {
+    "before_sender": {
+      "value": "$1,000.00",
+      "provenance": {
+        "source": "kane",
+        "executionId": "57a2f865-9b1c-4eaa-8a32-30a3d5bfb474",
+        "field": "before_sender",
+        "stdoutSha256": "702a650f3098884e08f10e834581f7366b46d7c4393b39ee396d85fa6691fd93"
+      }
+    },
+    "before_recipient": {
+      "value": "$500.00",
+      "provenance": {
+        "source": "kane",
+        "executionId": "57a2f865-9b1c-4eaa-8a32-30a3d5bfb474",
+        "field": "before_recipient",
+        "stdoutSha256": "702a650f3098884e08f10e834581f7366b46d7c4393b39ee396d85fa6691fd93"
+      }
+    },
+    "after_sender": {
+      "value": "$900.00",
+      "provenance": {
+        "source": "kane",
+        "executionId": "57a2f865-9b1c-4eaa-8a32-30a3d5bfb474",
+        "field": "after_sender",
+        "stdoutSha256": "702a650f3098884e08f10e834581f7366b46d7c4393b39ee396d85fa6691fd93"
+      }
+    },
+    "after_recipient": {
+      "value": "$600.00",
+      "provenance": {
+        "source": "kane",
+        "executionId": "57a2f865-9b1c-4eaa-8a32-30a3d5bfb474",
+        "field": "after_recipient",
+        "stdoutSha256": "702a650f3098884e08f10e834581f7366b46d7c4393b39ee396d85fa6691fd93"
+      }
+    }
+  },
+  "normalizedCents": {
+    "before_sender": {
+      "cents": 100000,
+      "provenance": {
+        "source": "kane",
+        "executionId": "57a2f865-9b1c-4eaa-8a32-30a3d5bfb474",
+        "field": "before_sender",
+        "stdoutSha256": "702a650f3098884e08f10e834581f7366b46d7c4393b39ee396d85fa6691fd93"
+      }
+    },
+    "before_recipient": {
+      "cents": 50000,
+      "provenance": {
+        "source": "kane",
+        "executionId": "57a2f865-9b1c-4eaa-8a32-30a3d5bfb474",
+        "field": "before_recipient",
+        "stdoutSha256": "702a650f3098884e08f10e834581f7366b46d7c4393b39ee396d85fa6691fd93"
+      }
+    },
+    "after_sender": {
+      "cents": 90000,
+      "provenance": {
+        "source": "kane",
+        "executionId": "57a2f865-9b1c-4eaa-8a32-30a3d5bfb474",
+        "field": "after_sender",
+        "stdoutSha256": "702a650f3098884e08f10e834581f7366b46d7c4393b39ee396d85fa6691fd93"
+      }
+    },
+    "after_recipient": {
+      "cents": 60000,
+      "provenance": {
+        "source": "kane",
+        "executionId": "57a2f865-9b1c-4eaa-8a32-30a3d5bfb474",
+        "field": "after_recipient",
+        "stdoutSha256": "702a650f3098884e08f10e834581f7366b46d7c4393b39ee396d85fa6691fd93"
+      }
+    }
+  },
+  "repairAuthorization": "NOT_AUTHORIZED",
+  "verification": "SATISFIED",
+  "verdict": {
+    "contractId": "INV-001",
+    "status": "SATISFIED",
+    "expected": 150000,
+    "observed": 150000,
+    "difference": 0,
+    "explanation": "Combined balance was preserved.",
+    "provenance": [
+      {
+        "source": "kane",
+        "executionId": "57a2f865-9b1c-4eaa-8a32-30a3d5bfb474",
+        "field": "before_sender",
+        "stdoutSha256": "702a650f3098884e08f10e834581f7366b46d7c4393b39ee396d85fa6691fd93"
+      },
+      {
+        "source": "kane",
+        "executionId": "57a2f865-9b1c-4eaa-8a32-30a3d5bfb474",
+        "field": "before_recipient",
+        "stdoutSha256": "702a650f3098884e08f10e834581f7366b46d7c4393b39ee396d85fa6691fd93"
+      },
+      {
+        "source": "kane",
+        "executionId": "57a2f865-9b1c-4eaa-8a32-30a3d5bfb474",
+        "field": "after_sender",
+        "stdoutSha256": "702a650f3098884e08f10e834581f7366b46d7c4393b39ee396d85fa6691fd93"
+      },
+      {
+        "source": "kane",
+        "executionId": "57a2f865-9b1c-4eaa-8a32-30a3d5bfb474",
+        "field": "after_recipient",
+        "stdoutSha256": "702a650f3098884e08f10e834581f7366b46d7c4393b39ee396d85fa6691fd93"
+      }
+    ],
+    "timestamp": "2026-11-25T16:03:33.322Z",
+    "executionId": "57a2f865-9b1c-4eaa-8a32-30a3d5bfb474"
+  },
+  "creditsConsumed": 33.71470499999999,
+  "cumulativeReportedCredits": 84.004055,
+  "evidence": {
+    "stdoutSha256": "702a650f3098884e08f10e834581f7366b46d7c4393b39ee396d85fa6691fd93",
+    "stderrSha256": "390732509bf0c1f6015d9ed01b656f75c7b53b777a123aa915fe6591a4ab8f61",
+    "contractSha256": "393639a7598c4d24ad147dc5f8a1dfe1448355721527f125b649ba6e8ed674bb",
+    "objectiveSha256": "693753f35149bd7a50f80c3c3a2f2bdb5978d6fc24fc5ad812d1b2a2f6348552"
+  }
+}

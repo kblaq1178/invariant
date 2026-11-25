@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "name": "Warehouse inventory",
+  "description": "Compare stock recorded by the inventory service with stock displayed in a physical count.",
+  "url": "http://127.0.0.1:4173/inventory",
+  "objective": "Store the integer displayed as On-record stock as 'recorded_units'. Store the integer displayed as Physically counted stock as 'counted_units'. Finish.",
+  "observations": [
+    "recorded_units",
+    "counted_units"
+  ],
+  "contract": {
+    "operator": "equality",
+    "format": "integer",
+    "left": [
+      "recorded_units"
+    ],
+    "right": [
+      "counted_units"
+    ]
+  }
+}

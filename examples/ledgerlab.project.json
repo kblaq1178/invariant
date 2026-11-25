@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "name": "LedgerLab",
+  "description": "Built-in benchmark for conservation across an Alice-to-Bob transfer.",
+  "url": "http://127.0.0.1:3000/fixtures/conservation",
+  "objective": "Click Reset demo state. Store the displayed Alice balance as 'before_sender'. Store the displayed Bob balance as 'before_recipient'. With Sender Alice and Recipient Bob, enter 100.00 in Amount (USD) and click Send transfer exactly once. Confirm the page displays Transfer completed. Store the displayed Alice balance as 'after_sender'. Store the displayed Bob balance as 'after_recipient'. Finish. Store the displayed currency text exactly.",
+  "observations": [
+    "before_sender",
+    "before_recipient",
+    "after_sender",
+    "after_recipient"
+  ],
+  "contract": {
+    "operator": "conservation",
+    "format": "usd",
+    "left": [
+      "before_sender",
+      "before_recipient"
+    ],
+    "right": [
+      "after_sender",
+      "after_recipient"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root { color-scheme: dark; background: #10151a; color: #edf3f5; }
+body { font-family: system-ui, sans-serif; margin: 0; }
+.shell { max-width: 69rem; margin-inline: auto; padding-inline: clamp(1rem, 5vw, 3rem); }
+header { border-bottom: 1px solid #303c44; padding-block: 1rem; }
+.brand { font: 700 .9rem ui-monospace, monospace; letter-spacing: .17em; }
+.brand span { color: #6dd8cb; font-size: 1.3rem; vertical-align: middle; }
+.intro { padding-block: clamp(2rem, 6vw, 4.5rem) 2rem; }
+.eyebrow { font: 700 .72rem ui-monospace, monospace; letter-spacing: .16em; color: #78c9c0; }
+h1 { font-size: clamp(2.8rem, 8vw, 5rem); font-weight: 720; letter-spacing: -.065em; line-height: 1.05; margin-block: .45rem .85rem; }
+h2 { font-size: 1.1rem; font-weight: 650; margin-bottom: .85rem; }
+p { color: #b6c4cb; }
+.panel { background: #181f26; border: 1px solid #35424b; padding: clamp(1rem, 3vw, 1.5rem); border-radius: .7rem; min-width: 0; }
+.account h3 { margin-block: .55rem .3rem; color: #cbd7dd; }
+output, .entry span, code { font-family: ui-monospace, monospace; color: #edf3f5; }
+.balance { font-size: clamp(1.6rem, 5vw, 2.35rem); font-weight: 650; display: block; }
+.workbench { display: grid; gap: 1rem; margin-top: 1rem; }
+@media (min-width: 48rem) { .workbench { grid-template-columns: .9fr 1.1fr; } }
+form { display: grid; gap: .85rem; }
+label { display: grid; gap: .3rem; font-size: .9rem; }
+input, select { background: #10151a; color: inherit; width: 100%; border: 1px solid #53636e; border-radius: .35rem; padding: .55rem .7rem; }
+button { border-radius: .35rem; padding: .6rem .8rem; background: #86ddd3; color: #101a1e; font-weight: 650; cursor: pointer; }
+button.secondary { background: transparent; color: #c7d7dd; border: 1px solid #53636e; font-size: .85rem; }
+:focus-visible { outline: 2px solid #91f1e5; outline-offset: 3px; }
+.message { overflow-wrap: anywhere; margin-top: .7rem; color: #adede5; }
+.error, .fixture { color: #ffd49a; }
+.fixture { border: 1px solid #997242; border-radius: .4rem; padding: .75rem; margin-bottom: 1rem; }
+.empty { margin-top: 1rem; }
+.history li { margin-top: .8rem; padding-top: .8rem; border-top: 1px solid #35424b; }
+.entry { display: flex; gap: .5rem; justify-content: space-between; flex-wrap: wrap; }
+.transaction-id { font-size: .8rem; overflow-wrap: anywhere; margin-block: .3rem .6rem; }
+footer { margin-block: 1.3rem 2.5rem; font-size: .85rem; color: #a8c5c8; }
+footer a { text-decoration: underline; text-underline-offset: .2em; }

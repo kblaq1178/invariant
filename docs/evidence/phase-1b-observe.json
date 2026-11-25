@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "source": "kane",
+  "executionId": "b304f85f-04e2-47f1-ac24-8b0208563a38",
+  "cliVersion": "0.10.9",
+  "objective": "observe",
+  "url": "http://127.0.0.1:3000/",
+  "seededDefect": false,
+  "timestamp": "2026-11-25T15:52:27.916Z",
+  "workflow": "PASSED",
+  "exitCode": 0,
+  "completedSteps": 4,
+  "durationSeconds": 55.8,
+  "observationsStatus": "AVAILABLE",
+  "repairAuthorization": "NOT_AUTHORIZED",
+  "verification": "NOT_APPLICABLE",
+  "verdict": null,
+  "creditsConsumed": 23.6550075,
+  "cumulativeReportedCredits": 23.6550075,
+  "evidence": {
+    "stdoutSha256": "6d3f7f42185a0a4423d016cebab4119b9c810d3a918a06f5e6c8865a836a3b63",
+    "stderrSha256": "bc51cc6f2ab2e1e8c1f21559318fef7a91fd4d4e8b9314f3e9642b4c67cacfe9",
+    "contractSha256": "393639a7598c4d24ad147dc5f8a1dfe1448355721527f125b649ba6e8ed674bb",
+    "objectiveSha256": "c0e5796a2765e41d6fee5114c49522d0453db7fd76ee5c0853a41de2c985247d"
+  },
+  "revalidatedFromRawEvidence": true,
+  "observations": {
+    "initial_sender": {
+      "value": "$1,000.00",
+      "provenance": {
+        "source": "kane",
+        "executionId": "b304f85f-04e2-47f1-ac24-8b0208563a38",
+        "field": "initial_sender",
+        "stdoutSha256": "6d3f7f42185a0a4423d016cebab4119b9c810d3a918a06f5e6c8865a836a3b63"
+      }
+    },
+    "initial_recipient": {
+      "value": "$500.00",
+      "provenance": {
+        "source": "kane",
+        "executionId": "b304f85f-04e2-47f1-ac24-8b0208563a38",
+        "field": "initial_recipient",
+        "stdoutSha256": "6d3f7f42185a0a4423d016cebab4119b9c810d3a918a06f5e6c8865a836a3b63"
+      }
+    }
+  },
+  "normalizedCents": {
+    "initial_sender": {
+      "cents": 100000,
+      "provenance": {
+        "source": "kane",
+        "executionId": "b304f85f-04e2-47f1-ac24-8b0208563a38",
+        "field": "initial_sender",
+        "stdoutSha256": "6d3f7f42185a0a4423d016cebab4119b9c810d3a918a06f5e6c8865a836a3b63"
+      }
+    },
+    "initial_recipient": {
+      "cents": 50000,
+      "provenance": {
+        "source": "kane",
+        "executionId": "b304f85f-04e2-47f1-ac24-8b0208563a38",
+        "field": "initial_recipient",
+        "stdoutSha256": "6d3f7f42185a0a4423d016cebab4119b9c810d3a918a06f5e6c8865a836a3b63"
+      }
+    }
+  }
+}

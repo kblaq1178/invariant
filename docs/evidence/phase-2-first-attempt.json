@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "runId": "c9ff516a-85a2-4dca-a83e-4f92e3ab67f3",
+  "objective": "Click Reset demo state. Store the displayed Alice balance as 'before_sender'. Store the displayed Bob balance as 'before_recipient'. With Sender Alice and Recipient Bob, enter 100.00 in Amount (USD) and click Send transfer exactly once. Confirm the page displays Transfer completed. Store the displayed Alice balance as 'after_sender'. Store the displayed Bob balance as 'after_recipient'. Finish. Store the displayed currency text exactly.",
+  "contractSha256": "393639a7598c4d24ad147dc5f8a1dfe1448355721527f125b649ba6e8ed674bb",
+  "objectiveSha256": "693753f35149bd7a50f80c3c3a2f2bdb5978d6fc24fc5ad812d1b2a2f6348552",
+  "snapshotSha256": "7d00d7c63625273d786bf6fc318102634cacfb51525b3c8a198557b9e5dfb284",
+  "protectedHashes": {
+    "contracts/v1.json": "393639a7598c4d24ad147dc5f8a1dfe1448355721527f125b649ba6e8ed674bb",
+    "src/invariants/evaluate.ts": "44e5fd9e37dd8de4351a0cb262e66b66fdb96eb036481106319ae8ef5f2a9a0b",
+    "src/kane/objectives.ts": "9253c93ee704670d04a01bc04431a8638a94799767fc61df139b6c72584438c2",
+    "src/kane/execute.ts": "50898574b4f36a7f6af65fb169570b1f8a70aeae445b9bebe7c2a821eb990869",
+    "src/kane/stream.ts": "f0aae66fde879d0ee77b9eb4e9a53d9ce8dac45c3815e20216fc6770a3b9d12a",
+    "src/kane/observations.ts": "207a7379b2a77a5eb5d016a2298fd4619f97e889bf931744b0014dd3a2ea2310",
+    "src/runtime/process.ts": "aae669432c158d1a505d39be23b3fa9f60a37f44ec6eff86751b57f697e8eef9",
+    "src/ledger/money.ts": "bf22f3866a8f5edcd1fcaf8ba6b10ec586c1571ec3f56da4ac84c3fc2138ff15",
+    "src/ledger/transactions.ts": "66e22f650ec6bed495cb835cbed3b8650a16c50f8b52a7e41c889bd137524f45",
+    "src/ledger/fixtures/conservation.ts": "76d9da6dea9aabf5b793323249beae91e14267c6e1b5edb20f22b74475e3929f",
+    "src/ledger/fixtures/idempotency.ts": "6d42816833356f80a651a5a6129842182042c7e3286366609e52466db672bea3",
+    "app/ledger-lab.tsx": "bd965ff377acb2c92a224e4525f74d02b3e13f4f02408fc6cbcf468f5d7ff763",
+    "scripts/repair.ts": "240bc8345732e1a6f2ee4b8d50aea6ee3c868e9863672e24638b5b0844c04c9b",
+    "src/repair/target.ts": "b699cfaba3c9ec8c707c1dc754f4641aae51f68ee492ad12e287b193cfd274df",
+    "src/repair/codex.ts": "89ac2cb465f0b03ba7d9c28655ba54253e99af2f9c7c1c697cbb3cd06de771da",
+    "src/repair/loop.ts": "4a65ac9b407b9e07ee8e2968b108d87a9b47c8bf83ed7764a320929907794b92",
+    "src/repair/patch.ts": "29f5e1b3c06d9513bce7fecceaa39d17c468da1aca919a3a1cbdfb918425f607",
+    "tests/phase1.test.ts": "d4b77a5b525e6a2d5f93e58cc17657bd20859c1c9d076665b86b938707f7288d",
+    "tests/repair.test.ts": "458f2261ef2a0904a2d3de7456924f476d343242a19d03b98c40d28edae5295c"
+  },
+  "allowedPaths": [
+    "transactions.ts"
+  ],
+  "contractId": "INV-001",
+  "defectOrigin": "SEEDED_BENCHMARK",
+  "initial": {
+    "executionId": "a991d6eb-882e-4a65-a185-4c774839063f",
+    "workflow": "PASSED",
+    "observations": {
+      "before_sender": {
+        "value": "$1,000.00",
+        "provenance": {
+          "source": "kane",
+          "executionId": "a991d6eb-882e-4a65-a185-4c774839063f",
+          "field": "before_sender",
+          "stdoutSha256": "3be3dcace1d6d1a652a9ba22354384f191fc8a06615791d4dd13609fd7941bfc"
+        }
+      },
+      "before_recipient": {
+        "value": "$500.00",
+        "provenance": {
+          "source": "kane",
+          "executionId": "a991d6eb-882e-4a65-a185-4c774839063f",
+          "field": "before_recipient",
+          "stdoutSha256": "3be3dcace1d6d1a652a9ba22354384f191fc8a06615791d4dd13609fd7941bfc"
+        }
+      },
+      "after_sender": {
+        "value": "$1,000.00",
+        "provenance": {
+          "source": "kane",
+          "executionId": "a991d6eb-882e-4a65-a185-4c774839063f",
+          "field": "after_sender",
+          "stdoutSha256": "3be3dcace1d6d1a652a9ba22354384f191fc8a06615791d4dd13609fd7941bfc"
+        }
+      },
+      "after_recipient": {
+        "value": "$600.00",
+        "provenance": {
+          "source": "kane",
+          "executionId": "a991d6eb-882e-4a65-a185-4c774839063f",
+          "field": "after_recipient",
+          "stdoutSha256": "3be3dcace1d6d1a652a9ba22354384f191fc8a06615791d4dd13609fd7941bfc"
+        }
+      }
+    },
+    "creditsConsumed": 21.8415125,
+    "stdoutSha256": "3be3dcace1d6d1a652a9ba22354384f191fc8a06615791d4dd13609fd7941bfc",
+    "stderrSha256": "3bca9a87f599e14de570f708c4a3b1fb3ff9626401bd44d69f0a907f9ea2bfb4",
+    "contractSha256": "393639a7598c4d24ad147dc5f8a1dfe1448355721527f125b649ba6e8ed674bb",
+    "objectiveSha256": "693753f35149bd7a50f80c3c3a2f2bdb5978d6fc24fc5ad812d1b2a2f6348552",
+    "sessionId": "228a33fc-9edc-4db2-bade-743ca922c848",
+    "kaneRunId": "run-0",
+    "verdict": {
+      "contractId": "INV-001",
+      "status": "VIOLATED",
+      "expected": 150000,
+      "observed": 160000,
+      "difference": 10000,
+      "explanation": "Combined balance changed after the transfer.",
+      "provenance": [
+        {
+          "source": "kane",
+          "executionId": "a991d6eb-882e-4a65-a185-4c774839063f",
+          "field": "before_sender",
+          "stdoutSha256": "3be3dcace1d6d1a652a9ba22354384f191fc8a06615791d4dd13609fd7941bfc"
+        },
+        {
+          "source": "kane",
+          "executionId": "a991d6eb-882e-4a65-a185-4c774839063f",
+          "field": "before_recipient",
+          "stdoutSha256": "3be3dcace1d6d1a652a9ba22354384f191fc8a06615791d4dd13609fd7941bfc"
+        },
+        {
+          "source": "kane",
+          "executionId": "a991d6eb-882e-4a65-a185-4c774839063f",
+          "field": "after_sender",
+          "stdoutSha256": "3be3dcace1d6d1a652a9ba22354384f191fc8a06615791d4dd13609fd7941bfc"
+        },
+        {
+          "source": "kane",
+          "executionId": "a991d6eb-882e-4a65-a185-4c774839063f",
+          "field": "after_recipient",
+          "stdoutSha256": "3be3dcace1d6d1a652a9ba22354384f191fc8a06615791d4dd13609fd7941bfc"
+        }
+      ],
+      "timestamp": "2026-11-25T16:27:43.049Z",
+      "executionId": "a991d6eb-882e-4a65-a185-4c774839063f"
+    }
+  },
+  "repair": {
+    "completed": true,
+    "durationMs": 95817,
+    "timedOut": false,
+    "exitCode": 0,
+    "stdoutSha256": "a20d089c5ae4d1dd39d97b659ec181cc2c8f426d19168bc03cf8cafa06d352bb",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "packetSha256": "3116e6922be97f7f84fc8279dd0ce37677a267456659322dcaf9436807beec19",
+  "scenarios": [],
+  "events": [
+    {
+      "runId": "c9ff516a-85a2-4dca-a83e-4f92e3ab67f3",
+      "state": "READY",
+      "at": "2026-11-25T16:25:43.771Z"
+    },
+    {
+      "runId": "c9ff516a-85a2-4dca-a83e-4f92e3ab67f3",
+      "state": "OBSERVING",
+      "at": "2026-11-25T16:25:43.780Z"
+    },
+    {
+      "runId": "c9ff516a-85a2-4dca-a83e-4f92e3ab67f3",
+      "state": "EVALUATING",
+      "at": "2026-11-25T16:27:43.049Z"
+    },
+    {
+      "runId": "c9ff516a-85a2-4dca-a83e-4f92e3ab67f3",
+      "state": "VIOLATION_DETECTED",
+      "at": "2026-11-25T16:27:43.050Z"
+    },
+    {
+      "runId": "c9ff516a-85a2-4dca-a83e-4f92e3ab67f3",
+      "state": "REPAIR_AUTHORIZED",
+      "at": "2026-11-25T16:27:43.056Z"
+    },
+    {
+      "runId": "c9ff516a-85a2-4dca-a83e-4f92e3ab67f3",
+      "state": "REPAIRING",
+      "at": "2026-11-25T16:27:43.057Z"
+    },
+    {
+      "runId": "c9ff516a-85a2-4dca-a83e-4f92e3ab67f3",
+      "state": "VALIDATING_PATCH",
+      "at": "2026-11-25T16:29:18.890Z"
+    },
+    {
+      "runId": "c9ff516a-85a2-4dca-a83e-4f92e3ab67f3",
+      "state": "REJECTED",
+      "at": "2026-11-25T16:29:19.076Z"
+    }
+  ],
+  "creditsConsumed": 21.8415125,
+  "elapsedMs": 215307,
+  "finalStatus": "REJECTED",
+  "reason": "Patch scope, protected inputs, or local checks failed.",
+  "sandbox": {
+    "verified": true,
+    "exitCode": 0,
+    "timedOut": false,
+    "stdoutSha256": "99937cb9642872534253442171de041519d3261594367518c7a90d3d557ddcc3",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stageCounts": {
+    "runs": 1,
+    "credits": 21.8415125,
+    "repairs": 1,
+    "unresolved": true
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "source": "KANE_CAPTURE",
+  "executionId": "15b65173-d48f-497a-a74e-7d74f6153bf8",
+  "configurationSha256": "dceac0491dae4a03ff2e991b0f5af5aabecfe66103b978ec7e55a836d9421fe5",
+  "stdoutSha256": "521b186b2079dac02c5ff9c5f0688a5b7d9b8009cdf04cbfa5493b40e3da0571",
+  "objectiveSha256": "aa35379009ea66fd3564cb43dbad6292e378f8ea3b9ab13aa363b0bff08d9be9",
+  "contractSha256": "1a08e849c7301570d0b65a356b67ac198ae0ad718f75f1eb714a83a31a4d6d8a",
+  "stderrSha256": "63b87032bb6be22702a082c03227561b9fd4339fc65593dece6878ad005b1c2a",
+  "limits": {
+    "maxSteps": 12,
+    "timeoutSeconds": 180
+  },
+  "exitCode": 0,
+  "workflow": "PASSED",
+  "verdict": {
+    "status": "VIOLATED",
+    "values": {
+      "before_north": 240,
+      "before_south": 110,
+      "after_north": 240,
+      "after_south": 150
+    },
+    "expected": 350,
+    "observed": 390,
+    "difference": 40,
+    "reason": "The observed side differs from the expected side."
+  },
+  "observations": {
+    "before_north": "240",
+    "before_south": "110",
+    "after_north": "240",
+    "after_south": "150"
+  },
+  "sessionId": "49e4ebcd-ae09-4faf-a00a-844336ee0edc",
+  "kaneRunId": "run-0",
+  "reportedCredits": 25.6596625,
+  "durationSeconds": 70.7,
+  "completedAt": "2026-11-25T17:38:39.584Z",
+  "provenance": {
+    "before_north": {
+      "executionId": "15b65173-d48f-497a-a74e-7d74f6153bf8",
+      "stdoutSha256": "521b186b2079dac02c5ff9c5f0688a5b7d9b8009cdf04cbfa5493b40e3da0571",
+      "field": "before_north"
+    },
+    "before_south": {
+      "executionId": "15b65173-d48f-497a-a74e-7d74f6153bf8",
+      "stdoutSha256": "521b186b2079dac02c5ff9c5f0688a5b7d9b8009cdf04cbfa5493b40e3da0571",
+      "field": "before_south"
+    },
+    "after_north": {
+      "executionId": "15b65173-d48f-497a-a74e-7d74f6153bf8",
+      "stdoutSha256": "521b186b2079dac02c5ff9c5f0688a5b7d9b8009cdf04cbfa5493b40e3da0571",
+      "field": "after_north"
+    },
+    "after_south": {
+      "executionId": "15b65173-d48f-497a-a74e-7d74f6153bf8",
+      "stdoutSha256": "521b186b2079dac02c5ff9c5f0688a5b7d9b8009cdf04cbfa5493b40e3da0571",
+      "field": "after_south"
+    }
+  }
+}

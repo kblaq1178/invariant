@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "name": "Warehouse transfer",
+  "description": "Verify conservation across North and South warehouse stock transfers.",
+  "url": "http://127.0.0.1:3182/inventory/seeded",
+  "objective": "Click Reset stock. Store the displayed North warehouse quantity text as 'before_north'. Store the displayed South warehouse quantity text as 'before_south'. Enter 40 in Transfer quantity and click Move stock once. Confirm Transfer complete. Store the displayed North warehouse quantity text as 'after_north'. Store the displayed South warehouse quantity text as 'after_south'. Store each quantity as displayed text, then finish.",
+  "observations": [
+    "before_north",
+    "before_south",
+    "after_north",
+    "after_south"
+  ],
+  "contract": {
+    "operator": "conservation",
+    "format": "integer",
+    "left": [
+      "before_north",
+      "before_south"
+    ],
+    "right": [
+      "after_north",
+      "after_south"
+    ]
+  }
+}
